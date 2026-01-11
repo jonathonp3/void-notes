@@ -12,19 +12,19 @@ This repository complements the official Void Linux resources by providing pract
 
 ## Contents
 
-- [Installation Guides](INSTALLATION.md)  
+- [Installation Guides](INSTALLATION/)
   Step-by-step instructions for installing Void Linux on various platforms.
 
-- [Raspberry Pi](RASPBERRY_PI/)  
+- [Raspberry Pi](RASPBERRY_PI/)
   Guides and notes specific to running Void Linux on Raspberry Pi devices, including btrfs setup and boot configuration.
 
-- [Troubleshooting](TROUBLESHOOTING.md)  
+- [Troubleshooting](TROUBLESHOOTING/)
   Common issues encountered and how to resolve them.
 
-- [Configurations](CONFIGS/)  
+- [Configurations](CONFIGS/)
   Config files and snippets to customize Void Linux.
 
-- [Scripts](SCRIPTS/)  
+- [Scripts](SCRIPTS/) 
   Useful scripts to automate tasks or setup procedures.
 
 ---
