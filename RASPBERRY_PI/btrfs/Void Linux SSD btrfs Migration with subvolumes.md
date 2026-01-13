@@ -160,13 +160,13 @@ sudo umount /mnt/sdc1
 
 <b>Notes</b>
 
- - Always double-check the device name before formatting the Raspberry Pi to avoid formatting the incorrect device.
+ - Always double-check the device name before formatting.
 
 - Use --no-xattrs with rsync to avoid permission issues with extended attributes. Works without errors with a clean freshly unused image.
 
-- For Raspberry Pi, ensure cmdline.txt is a single line with no line breaks.
+- Ensure *cmdline.txt* is a single line with no line breaks.
 
-- Validate UUID and PARTUUID consistency between /etc/fstab and cmdline.txt if does not correctly. Make sure you add *rootflags=subvol=@*
+- Validate UUID and PARTUUID consistency between /etc/fstab and cmdline.txt if does not boot correctly. Make sure you add *PARTUUID=my-partuuid* and *rootflags=subvol=@*.
 
 - Do not remove the empty home directory in the root partition. It needs to be there otherwise subvolume @home will not mount.
 
