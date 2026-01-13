@@ -147,7 +147,7 @@ Edit cmdline.txt to set the correct root partition by PARTUUID and add rootflags
 ```bash
 sudo vim /mnt/sdc1/cmdline.txt
 ```
-<span style="color: purple;"For example:</b>
+For example:
 ```bash
 root=PARTUUID=5eb9c727-02 rootflags=subvol=@ rw rootwait console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 smsc95xx.turbo_mode=N dwc_otg.lpm_enable=0 loglevel=4 elevator=noop
 ```
