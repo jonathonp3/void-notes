@@ -140,7 +140,6 @@ sudo mkdir -p /mnt/sdc1
 sudo mount /dev/sdc1 /mnt/sdc1
 
 # Find the PARTUUID with the output of:
-```bash
 sudo blkid -s PARTUUID -o value /dev/sdc2
 ```
 Edit cmdline.txt to set the correct root partition by PARTUUID and add rootflags=subvol=@:
