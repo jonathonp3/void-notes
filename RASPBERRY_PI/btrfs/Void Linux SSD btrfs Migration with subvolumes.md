@@ -113,8 +113,7 @@ sudo mount -o subvol=@ /dev/sdc2 /mnt/sdc2
 ```
 
 3. Restore all data except /home into root subvolume
-
-Use rsync to copy data back to subvolume
+Use rsync to copy data to subvolume
 ```bash
 sudo rsync -aAXHv --no-xattrs /mnt/backup_sdc2/ /mnt/sdc2/
 ```
@@ -128,7 +127,7 @@ Edit the fstab on the restored root:
 ```bash
 sudo vim /mnt/sdc2/etc/fstab
 ```
-Update the root entry (/) to use btrfs and your new UUID. Examples of options:
+Update the root entry (/) to use btrfs and with the new UUID. Example:
 ```bash
 UUID=4ef4d54d-7987-4199-818e-5a2c35bf8f8d /       btrfs defaults,compress=zstd,subvol=@      0 1
 UUID=4ef4d54d-7987-4199-818e-5a2c35bf8f8d /home   btrfs defaults,compress=zstd,subvol=@home  0 2
