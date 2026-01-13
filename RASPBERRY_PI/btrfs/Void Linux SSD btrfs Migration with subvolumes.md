@@ -4,7 +4,7 @@ This guide walks you through migrating a Void Linux clean freshly imaged **(unus
 
 ---
 
-## Download Void Linux ARM Image for Raspberry Pi 5 under arm platforms. I chose > rpi-aarch64 > platform image glibc for best compatibility when running a server.
+Download Void the Raspberry Pi (rpi-aarch64) Image under arm platforms. I chose platform image glibc for best compatibility when running a server under linux.
 
 
 1. Download the ARM image:
