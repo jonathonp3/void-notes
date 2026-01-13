@@ -168,7 +168,7 @@ sudo umount /mnt/sdc1
 
 - Validate UUID and PARTUUID consistency between /etc/fstab and cmdline.txt if does not boot correctly.
 
-- Do not remove the empty home directory in the root partition. It needs to be there otherwise subvolume @home will not mount.
+- Do not remove the empty home directory in the root partition.
 
 
 
