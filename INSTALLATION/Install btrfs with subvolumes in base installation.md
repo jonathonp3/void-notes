@@ -159,7 +159,7 @@ sudo ln -s /etc/sv/dhcpcd /var/service/
 
 17. Setup wifi internet access for base installation (skip if not required)
 ```bash
-xbps-install -S wpa_supplicant if not installed
+xbps-install -S wpa_supplicant
 ```
 
 Setup SSID and password:
