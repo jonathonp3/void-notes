@@ -5,7 +5,7 @@
 root
 ```
 
-3. Create user with admin privileges and set password:
+2. Create user with admin privileges and set password:
 ```bash
 useradd -m -s /bin/bash username
 ```
@@ -18,7 +18,7 @@ Set user password:
 passwd username
 ```
 
-4. Configure sudoers to allow admin privileges for new username
+3. Configure sudoers to allow admin privileges for new username
 ```bash
 visudo
 ```
@@ -28,22 +28,22 @@ Uncomment or add the line (use the del key in Normal mode):
 %wheel ALL=(ALL) ALL
 ```
 
-5. logout:
+4. logout:
 ```bash
 logout
 ```
 
-6. Login username:
+5. Login username:
 ```bash
 username
 ```
 
-7. identify ip address
+6. identify ip address
 ```bash
 ip a | grep inet
 ```
 
-8. Create ssh key If you want to continue the setup from a different computer:
+7. Create ssh key If you want to continue the setup from a different computer:
 ```bash
 ssh-keygen -t rsa
 ```
@@ -55,12 +55,12 @@ ssh-copy-id username@192.168.45.121
 ssh username@192.168.45.121
 ```
 
-9. Enable Ethernet if did not do it in the chroot:
+8. Enable Ethernet if did not do it in the chroot:
 ```bash
 sudo ln -s /etc/sv/dhcpcd /var/service/
 ```
 
-10. Setup wifi if you have not done already:s
+9. Setup wifi if you have not done already:s
 
 Setup ssid and password:
 ```bash
@@ -91,7 +91,7 @@ Remove password:
 #psk="holekeeeptaste"
 ```
 
-11. Enable wpa_supplicant service:
+10. Enable wpa_supplicant service:
 ```bash
 sudo ln -s /etc/sv/wpa_supplicant /var/service/
 ```
@@ -102,7 +102,7 @@ sudo sv status wpa_supplicant
 sudo sv status dhcpcd
 ```
 
-12. Update hostname:
+11. Update hostname:
 ```bash
 sudo vim /etc/hostname
 ```
@@ -112,13 +112,13 @@ myhostname
 ```
 press the esc key then type :wq to save and exit
 
-13. Install vim
+12. Install vim
 Update xbps:
 ```bash
 xbps-install -u xbps
 ```
 
-14. Update system:
+13. Update system:
 ```bash
 sudo xbps-install -Syu
 ```
