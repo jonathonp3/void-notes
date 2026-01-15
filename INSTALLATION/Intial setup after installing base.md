@@ -1,7 +1,5 @@
 
 1. Login in to the root account:
-
-login: 
 ```bash
 root
 ```
@@ -61,22 +59,8 @@ ssh-keygen -t rsa
 ssh-copy-id username@192.168.45.121
 ssh username@192.168.45.121
 ```
-9. Install vim editor:
-```bash
-sudo xbps-install vim
-```
 
-10. Update hostname:
-```bash
-sudo vim /etc/hostname
-```
-add computer name:
-```bash
-myhostname
-```
-press the esc key then type :wq to save and exit
-
-10. Enable ethernet if did not aleady during the chroot:
+9. Enable ethernet if did not aleady during the chroot:
 ```bash
 sudo ln -s /etc/sv/dhcpcd /var/service/
 ```
@@ -90,7 +74,7 @@ sudo sv stop dhcpcd
 sudo rm /var/service/dhcpcd
 ```
 
-11. Setup wifi if it was skipped during the base installation:
+10. Setup wifi if it was skipped during the base installation:
 
 Setup ssid and password:
 ```bash
@@ -121,8 +105,7 @@ Remove password:
 #psk="holekeeeptaste"
 ```
 
-
-18. Enable wpa_supplicant service:
+11. Enable wpa_supplicant service:
 ```bash
 sudo ln -s /etc/sv/wpa_supplicant /var/service/
 ```
@@ -133,13 +116,23 @@ sudo sv status wpa_supplicant
 sudo sv status dhcpcd
 ```
 
-19. Install vim and update system:
+12. Update hostname:
+```bash
+sudo vim /etc/hostname
+```
+add computer name:
+```bash
+myhostname
+```
+press the esc key then type :wq to save and exit
+
+13. Install vim
 Update xbps:
 ```bash
 xbps-install -u xbps
 ```
 
-Update system:
+14. Update system:
 ```bash
 sudo xbps-install -Syu
 ```
