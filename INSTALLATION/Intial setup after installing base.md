@@ -1,4 +1,4 @@
-# Initial setup after boot strap installtion
+# Initial setup after boot strap installation
 
 1. Login in to the root account:
 ```bash
