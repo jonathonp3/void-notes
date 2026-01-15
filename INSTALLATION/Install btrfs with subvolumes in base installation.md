@@ -22,21 +22,21 @@ Partition Scheme: EFI
 
 EFI System Partition
 Creation Guidelines
-
-Size: 600 MB
+```bash
 Filesystem: FAT32
-Bootable Flag Setup
-
+Size: 600 MB
+Bootable Flag
+```
 Right-click on new EFI partition
 Select 'Manage Flags'
 Check 'Boot' checkbox
 
 Root Partition:	
+```bash
 Use btrfs file system 
 Label 'void_data'
-
 Swap Partition	4-12 GB	Linux Swap	
-
+```
 
 Caution Notes
 
