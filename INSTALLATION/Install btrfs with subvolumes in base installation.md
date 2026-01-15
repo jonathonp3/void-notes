@@ -1,4 +1,4 @@
-3 Void Linux Installation Section: Partitioning with GParted
+# Void Linux Installation Section: Partitioning with GParted
 Preparation
 
     Recommended Installation Media: Void Linux Live XFCE ISO
