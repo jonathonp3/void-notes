@@ -6,7 +6,7 @@ root
 ```
 passwd: voidlinux
 
-2. Change passwd
+2. Change password:
 ```bash
 passwd 
 ```
@@ -34,12 +34,12 @@ Uncomment or add the line (use the del key in Normal mode):
 %wheel ALL=(ALL) ALL
 ```
 
-5. logout
+5. logout:
 ```bash
 logout
 ```
 
-6. Login username
+6. Login username:
 ```bash
 username
 ```
@@ -49,12 +49,12 @@ username
 ip a | grep inet
 ```
 
-8. Create ssh key
+8. Create ssh key If you want to continue the setup from a different computer:
 ```bash
 ssh-keygen -t rsa
 ```
-If you want to continue the setep from other computer you can ssh to voidlinux installation
-From the other with linux installed or even using a live image will work:
+
+Login to void from another computer:
 ```bash
 ssh-keygen -t rsa
 ssh-copy-id username@192.168.45.121
