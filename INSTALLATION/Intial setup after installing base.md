@@ -5,11 +5,6 @@
 root
 ```
 
-2. Change root password if did not do it already:
-```bash
-passwd 
-```
-
 3. Create user with admin privileges and set password:
 ```bash
 useradd -m -s /bin/bash username
