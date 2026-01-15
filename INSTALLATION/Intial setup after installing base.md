@@ -61,21 +61,12 @@ ssh-copy-id username@192.168.45.121
 ssh username@192.168.45.121
 ```
 
-9. Enable ethernet if did not aleady during the chroot:
+9. Enable Ethernet if did not do it in the chroot:
 ```bash
 sudo ln -s /etc/sv/dhcpcd /var/service/
 ```
-Install NetworkManger:
-```bash
-sudo xpbs-install -S NetworkManager
-```
-Disable dhcpcd (if enabled) AND remove symlink:
-```bash
-sudo sv stop dhcpcd
-sudo rm /var/service/dhcpcd
-```
 
-10. Setup wifi if it was skipped during the base installation:
+10. Setup wifi if you have not done already:
 
 Setup ssid and password:
 ```bash
