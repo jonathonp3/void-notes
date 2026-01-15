@@ -16,40 +16,42 @@ sudo xbps-install -S gparted
 ```
 
 3. Partition Requirements
-Partition Scheme
-Partition	Size	Filesystem	Purpose
-EFI System Partition	600 MB	FAT32	Boot Management
-Root Partition	Remaining Space	btrfs System Files
-Swap Partition	2-4 GB	Linux Swap	
 
-EFI System Partition (ESP) Configuration
+Partition Scheme: EFI
+
+
+EFI System Partition
 Creation Guidelines
 
-    Size: 600 MB
-    Filesystem: FAT32
-    Bootable Flag: Essential for UEFI systems
-
+Size: 600 MB
+Filesystem: FAT32
 Bootable Flag Setup
 
-    Right-click on new EFI partition
-    Select 'Manage Flags'
-    Check 'Boot' checkbox
+Right-click on new EFI partition
+Select 'Manage Flags'
+Check 'Boot' checkbox
+
+Root Partition:	
+Use btrfs file system 
+Label 'void_data'
+
+Swap Partition	4-12 GB	Linux Swap	
+
 
 Caution Notes
 
-    Existing Operating System: Do not reformat existing EFI partitions
-    Verify current partition layout before modifications
-    Backup important data before partitioning
+Existing Operating System: Do not reformat existing EFI partitions
+Verify current partition layout before modifications
+Backup important data before partitioning
 
 Recommended Additional Steps
 
-    Verify partition sizes
-    Double-check filesystem types
-    Ensure correct partition flags are set
+Verify partition sizes
+Double-check filesystem types
+Ensure correct partition flags are set
 
-Void base installation
+# Void base installation
  
-
 4. To reformat the the parition if required for what ever reason in case you're are starting over: 
 Identify partiton number
 ```bash
