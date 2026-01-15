@@ -4,9 +4,8 @@
 ```bash
 root
 ```
-passwd: voidlinux
 
-2. Change password:
+2. Change root password if did not do it already:
 ```bash
 passwd 
 ```
@@ -66,7 +65,7 @@ ssh username@192.168.45.121
 sudo ln -s /etc/sv/dhcpcd /var/service/
 ```
 
-10. Setup wifi if you have not done already:
+10. Setup wifi if you have not done already:s
 
 Setup ssid and password:
 ```bash
