@@ -7,8 +7,7 @@ Preparation
 Installation Steps
 1. Boot into Live XFCE Environment
 
-    Use void-live-x86_64-xxxxxx-xfce ISO
-    Provides full desktop environment for easy setup
+Use void-live-x86_64-xxxxxx-xfce ISO
 
 2. Install GParted
 ```bash
