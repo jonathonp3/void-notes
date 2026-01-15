@@ -1,4 +1,4 @@
-Void Linux Installation Section: Partitioning with GParted
+3 Void Linux Installation Section: Partitioning with GParted
 Preparation
 
     Recommended Installation Media: Void Linux Live XFCE ISO
@@ -29,7 +29,7 @@ Bootable Flag
 ```
 Right-click on new EFI partition
 Select 'Manage Flags'
-Check 'Boot' checkbox
+Tick 'Boot'
 
 Root Partition:	
 ```bash
@@ -40,15 +40,8 @@ Swap Partition	4-12 GB	Linux Swap
 
 Caution Notes
 
-Existing Operating System: Do not reformat existing EFI partitions
-Verify current partition layout before modifications
+Do not reformat existing EFI partition if you have another operating system installed.
 Backup important data before partitioning
-
-Recommended Additional Steps
-
-Verify partition sizes
-Double-check filesystem types
-Ensure correct partition flags are set
 
 # Void base installation
  
