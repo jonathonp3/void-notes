@@ -124,7 +124,12 @@ sudo cp /etc/resolv.conf /mnt/etc/resolv.conf
 sudo chroot /mnt /bin/bash
 ```
 
-13. Update fstab:
+13. Set the password for root:
+```bash
+passwd
+```
+
+14. Update fstab:
 Copy the new UUID (check with lsblk -f)  to fstab
 
 The root partition UUID in my example is 1c58e652-93e7-4dda-9620-efa45771c186 the new EFI System Partition is UUID=979D-3E72 after formatting.
@@ -142,23 +147,23 @@ tmpfs                                      /tmp            tmpfs   defaults,nosu
 ```
 Press the Esc key :wq to write file and exit vi
 
-14. Install GRUB:
+15. Install GRUB:
 ```bash
 xbps-install -S grub-x86_64-efi efibootmgr
 ```
 
-15. Install grub:
+16. Install grub:
 ```boot
 grub-install --target=x86_64-efi --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-16.  Enable DHCP for ethernet connection:
+17.  Enable DHCP for ethernet connection:
 ```bash
 ln -s /etc/sv/dhcpcd /var/service/
 ```
 
-17. Setup wifi internet access for base installation (skip if not required)
+18. Setup wifi internet access for base installation (skip if not required)
 ```bash
 xbps-install -S wpa_supplicant
 ```
@@ -192,23 +197,23 @@ Remove the password as it no longer required
 #psk="holekeeeptaste"
 ```
 
-18. Enable wpa_supplicant service:
+19. Enable wpa_supplicant service:
 ```bash
 ln -s /etc/sv/wpa_supplicant /var/service/
 ```
 
-19. Exit chroot
+20. Exit chroot
 ```bash
 exit
 ```
 
-20. Exit and Unmount /mnt
+21. Exit and Unmount /mnt
 ```bash
 sudo umount -R /mnt
 sudo swapoff /dev/nvme0n1p5
 ```
 
-21. Shutdown and read 'Intial setup after installing base.md'
+22. Shutdown and read 'Intial setup after installing base.md'
 ```bash
 sudo poweroff
 ```
