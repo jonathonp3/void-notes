@@ -207,13 +207,12 @@ ln -s /etc/sv/wpa_supplicant /var/service/
 exit
 ```
 
-21. Exit and Unmount /mnt
+21. Unmount /mnt
 ```bash
 sudo umount -R /mnt
-sudo swapoff /dev/nvme0n1p5
 ```
 
-22. Shutdown and read 'Intial setup after installing base.md'
+22. Shutdown and read initial setup after installing base.md'
 ```bash
 sudo poweroff
 ```
