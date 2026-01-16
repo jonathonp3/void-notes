@@ -197,13 +197,18 @@ Remove the password as it no longer required
 ln -s /etc/sv/wpa_supplicant /var/service/
 ```
 
-19. Unmount /mnt
+19. Exit chroot
+```bash
+exit
+```
+
+20. Exit and Unmount /mnt
 ```bash
 sudo umount -R /mnt
 sudo swapoff /dev/nvme0n1p5
 ```
 
-20. Shutdown and read 'Intial setup after installing base.md'
+21. Shutdown and read 'Intial setup after installing base.md'
 ```bash
 sudo poweroff
 ```
