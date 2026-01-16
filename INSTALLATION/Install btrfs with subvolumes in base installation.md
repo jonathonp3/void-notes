@@ -155,7 +155,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 16.  Enable DHCP for ethernet connection:
 ```bash
-sudo ln -s /etc/sv/dhcpcd /var/service/
+ln -s /etc/sv/dhcpcd /var/service/
 ```
 
 17. Setup wifi internet access for base installation (skip if not required)
@@ -165,12 +165,12 @@ xbps-install -S wpa_supplicant
 
 Setup SSID and password:
 ```bash
-sudo wpa_passphrase "SSID_NAME" "WiFi_PASSWORD" | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_passphrase "SSID_NAME" "WiFi_PASSWORD" | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Typical Generated File:
 ```bash
-sudo wpa_passphrase "blue" "holekeeeptaste" | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_passphrase "blue" "holekeeeptaste" | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
 network={
 	ssid="blue"
 	#psk="holekeeeptaste"
@@ -179,13 +179,13 @@ network={
 ```
 Remove commented password line:
 ```bash
-sudo sed -i '/^[[:space:]]*#psk=/d' /etc/wpa_supplicant/wpa_supplicant.conf
+sed -i '/^[[:space:]]*#psk=/d' /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 or manually remove the password:
 
 ```bash
-sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
+vi /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 Remove the password as it no longer required
 ```bash
@@ -194,7 +194,7 @@ Remove the password as it no longer required
 
 18. Enable wpa_supplicant service:
 ```bash
-sudo ln -s /etc/sv/wpa_supplicant /var/service/
+ln -s /etc/sv/wpa_supplicant /var/service/
 ```
 
 19. Unmount /mnt
