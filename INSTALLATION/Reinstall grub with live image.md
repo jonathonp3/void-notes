@@ -72,7 +72,7 @@ exit
 sudo umount -R /mnt
 ```
 
-22. Shutdown and read initial setup after installing base.md'
+22. Shutdown
 ```bash
 sudo poweroff
 ```
