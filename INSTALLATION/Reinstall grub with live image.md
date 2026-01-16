@@ -11,7 +11,9 @@ lsblk -f
 sudo umount /dev/sdc1
 ```
 
-5. Write the image to your flash drive (replace X with your device number) Example /dev/sdc:
+5. Write the image to your flash drive (replace X with your device number) 
+
+Example /dev/sdc:
 ```bash
 sudo dd bs=4M if=void-live-x86_64-20250202-xfce.iso of=/dev/sdX status=progress
 ```
