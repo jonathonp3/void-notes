@@ -8,7 +8,9 @@ Download Void the Raspberry Pi (rpi-aarch64) Image under arm platforms. I chose 
 
 
 1. Download the ARM image from https://voidlinux.org/download/
-Check for the latest image (not the one below)
+
+Check for the latest image (don't use the the example below)
+
 Example:
 ```bash
 wget https://repo-default.voidlinux.org/live/current/void-rpi-aarch64-20250202.img.xz
