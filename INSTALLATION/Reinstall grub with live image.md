@@ -51,28 +51,33 @@ sudo mount --bind /run /mnt/run
 sudo cp /etc/resolv.conf /mnt/etc/resolv.conf
 ```
 
-11. Install GRUB:
+11. Chroot to /mnt
+```bash
+sudo chroot /mnt /bin/bash
+```
+
+12. Install GRUB:
 ```bash
 xbps-install -S grub-x86_64-efi efibootmgr
 ```
 
-12. Install grub:
+13. Install grub:
 ```boot
 grub-install --target=x86_64-efi --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-20. Exit chroot
+14. Exit chroot
 ```bash
 exit
 ```
 
-21. Unmount /mnt
+15. Unmount /mnt
 ```bash
 sudo umount -R /mnt
 ```
 
-22. Shutdown
+16. Shutdown
 ```bash
 sudo poweroff
 ```
