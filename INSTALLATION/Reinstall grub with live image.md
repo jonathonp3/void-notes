@@ -1,3 +1,5 @@
+# Reinstall grub with void live xfce
+
 1. Download the latest xfce live image at https://voidlinux.org/download/
 
 2. Identify your SSD device (Example sdc). Make sure you have identified the correct device:
@@ -14,7 +16,17 @@ sudo umount /dev/sdc1
 sudo dd bs=4M if=void-live-x86_64-20250202-xfce.iso of=/dev/sdX status=progress
 ```
 
-6. Boot the usb
+6. Boot usb flash drive by entering the BIOS/UEFI by pressing a specific key during startup:
+Common keys:
+```bash
+ Del
+F2
+F10
+F12
+Esc
+```
+F12 works for gigabyte motherboards which are the only boards i use for Linux. Gaming boards have good Linux support.
+
 
 7. Open a terminal and type to identify the EFI System Partition and the root partition which in my case is labelled void_data
 ```bash
