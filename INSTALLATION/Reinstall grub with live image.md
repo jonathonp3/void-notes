@@ -19,7 +19,7 @@ sudo dd bs=4M if=void-live-x86_64-20250202-xfce.iso of=/dev/sdX status=progress
 6. Boot usb flash drive by entering the BIOS/UEFI by pressing a specific key during startup:
 Common keys:
 ```bash
- Del
+Del
 F2
 F10
 F12
