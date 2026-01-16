@@ -170,7 +170,7 @@ wpa_passphrase "SSID_NAME" "WiFi_PASSWORD" | tee /etc/wpa_supplicant/wpa_supplic
 
 Typical Generated File:
 ```bash
-wpa_passphrase "blue" "holekeeeptaste" | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_passphrase "blue" "holekeeeptaste" | tee /etc/wpa_supplicant/wpa_supplicant.conf
 network={
 	ssid="blue"
 	#psk="holekeeeptaste"
