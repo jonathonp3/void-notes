@@ -11,6 +11,8 @@ Use void-live-x86_64-xxxxxx-xfce ISO
 
 2. Install GParted
 ```bash
+sudo xbps-install -Sy
+sudo xbps-install -u xbps
 sudo xbps-install -S gparted
 ```
 
