@@ -165,7 +165,7 @@ xbps-install -S wpa_supplicant
 
 Setup SSID and password:
 ```bash
-wpa_passphrase "SSID_NAME" "WiFi_PASSWORD" | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_passphrase "SSID_NAME" "WiFi_PASSWORD" | tee /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Typical Generated File:
