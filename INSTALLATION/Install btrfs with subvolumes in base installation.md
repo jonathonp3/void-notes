@@ -18,8 +18,7 @@ sudo xbps-install -S gparted
 
 3. Partition Requirements
 
-Partition Scheme: EFI
-
+Partition Scheme: Device >  Create Partition Table > select 'gpt'
 
 EFI System Partition
 Creation Guidelines
