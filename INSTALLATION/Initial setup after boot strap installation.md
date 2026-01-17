@@ -161,12 +161,12 @@ LANG="en_AU.UTF-8"
 LC_ALL="en_AU.UTF-8"
 ```
 
-18.  Apply the locale
+18.  Apply locale:
 ```bash
-sudo reboot
+sudo xbps-reconfigure -f glibc-locales
 ```
 
-19. Check Locale Settings for errors:
+19. Check Locale errors:
 ```bash
 locale
 ```
