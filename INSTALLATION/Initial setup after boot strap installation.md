@@ -146,7 +146,9 @@ sudo vim /etc/default/libc-locales
 ```
 add
 
+```bash
 en_AU.UTF-8 UTF-8
+```
 
 17. Set system's default locale:
 ```bash
@@ -169,7 +171,7 @@ sudo reboot
 locale
 ```
 
-20. Set mirrors:
+20. Set mirrors https://ftp.swin.edu.au/voidlinux/docs/xbps/repositories/mirrors/index.html#tier-1-mirrors :
 ```bash
 sudo vim /etc/xbps.d/00-repository-main.conf
 ```
