@@ -137,7 +137,9 @@ xbps-install -u xbps
 ```
 
 14. List Available Locales:
+```bash
 locale -a
+```
 
 15. Set System Locale to Australian English:
 ```bash
