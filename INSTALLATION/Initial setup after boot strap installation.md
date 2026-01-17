@@ -108,7 +108,7 @@ sudo sv status dhcpcd
 ip a | grep inet
 ```
 
-12. Create ssh key If you want to continue the setup from a different computer:
+12. Create ssh key If you decide to continue the setup from a different computer:
 ```bash
 ssh-keygen -t rsa
 ```
@@ -120,7 +120,17 @@ ssh-copy-id username@192.168.45.121
 ssh username@192.168.45.121
 ```
 
-13. Update hostname:
+13. Update xbps:
+```bash
+sudo xbps -Sy
+xbps-install -u xbps
+```
+14. Install vim if you did do so during installation:
+```bash
+xbps-install -S vim
+```
+
+15. Update hostname:
 ```bash
 sudo vim /etc/hostname
 ```
@@ -129,16 +139,6 @@ add computer name:
 myhostname
 ```
 press the esc key then type :wq to save and exit
-
-14. Update xbps:
-```bash
-sudo xbps -Sy
-xbps-install -u xbps
-```
-15. Install vim if you did do so during installation:
-```bash
-xbps-install -S vim
-```
 
 16. Set System Locale to Australian English:
 ```bash
