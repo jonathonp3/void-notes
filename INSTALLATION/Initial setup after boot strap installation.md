@@ -56,12 +56,12 @@ logout
 username
 ```
 
-8. Enable Ethernet if you did not during installation int he chroot:
+8. Enable Ethernet if you did not during installation in the chroot:
 ```bash
 sudo ln -s /etc/sv/dhcpcd /var/service/
 ```
 
-9. Setup wifi if you have not done already:
+9. Setup wifi in case you did not do during chroot:
 
 Setup ssid and password:
 ```bash
@@ -103,7 +103,7 @@ sudo sv status wpa_supplicant
 sudo sv status dhcpcd
 ```
 
-11. identify ip address
+11. Identify your ip address:
 ```bash
 ip a | grep inet
 ```
@@ -113,7 +113,7 @@ ip a | grep inet
 ssh-keygen -t rsa
 ```
 
-Login to void from another computer:
+Login to void from another computer. Update your ip address:
 ```bash
 ssh-keygen -t rsa
 ssh-copy-id username@192.168.45.121
@@ -130,38 +130,86 @@ myhostname
 ```
 press the esc key then type :wq to save and exit
 
-13. Install vim
-Update xbps:
+14. Update xbps:
 ```bash
+sudo xbps -Sy
 xbps-install -u xbps
 ```
-
-14. List Available Locales:
+15. Install vim if you did do so during installation:
 ```bash
-locale -a
+xbps-install -S vim
 ```
 
-15. Set System Locale to Australian English:
+16. Set System Locale to Australian English:
+```bash
+sudo vim /etc/default/libc-locales
+```
+add
+
+en_AU.UTF-8 UTF-8
+
+17. Set system's default locale:
 ```bash
 sudo vim /etc/locale.conf
 ```
 add
+
 ```bash
-LANG=en_AU.UTF-8
+LANG="en_AU.UTF-8"
+LC_ALL="en_AU.UTF-8"
 ```
 
-16.  Generate the Locale (for glibc):
+18.  Apply the locale
 ```bash
-sudo xbps-reconfigure -f glibc-locales
-sudo locale-gen
+sudo reboot
 ```
 
-17. Update system:
+19. Check Locale Settings:
+```bash
+locale
+```
+
+20. Set mirrors:
+```bash
+sudo vim /etc/xbps.d/00-repository-main.conf
+```
+
+add
+
+```bash
+# Prioritize Fastly CDN (Tier 1 - globally distributed, often fastest, always fresh)
+repository=https://repo-fastly.voidlinux.org/current
+repository=https://repo-fastly.voidlinux.org/current/nonfree
+repository=https://repo-fastly.voidlinux.org/current/debug
+
+# Australian Tier 2 mirrors (as fallbacks, choose one or both)
+# AARNet - Canberra, Australia
+repository=https://mirror.aarnet.edu.au/pub/voidlinux/current
+repository=https://mirror.aarnet.edu.au/pub/voidlinux/current/nonfree
+repository=https://mirror.aarnet.edu.au/pub/voidlinux/current/debug
+
+# Swinburne University - Melbourne, Australia
+repository=https://ftp.swin.edu.au/voidlinux/current
+repository=https://ftp.swin.edu.au/voidlinux/current/nonfree
+repository=https://ftp.swin.edu.au/voidlinux/current/debug
+
+# Optional: Other reliable Tier 1 mirrors as very general fallbacks
+# repository=https://repo-fi.voidlinux.org/current
+# repository=https://repo-de.voidlinux.org/current
+# repository=https://mirrors.servercentral.com/voidlinux/current
+```
+
+21. Check mirrors:
+```bash
+sudo xbps-install -S
+```
+
+22. Update system:
 ```bash
 sudo xbps-install -Syu
 ```
 
-18. Restart
+23. Restart
 ```bash
 sudo reboot
 ```
