@@ -103,7 +103,7 @@ sudo sv status wpa_supplicant
 sudo sv status dhcpcd
 ```
 
-11. Identify your ip address:
+11. Identify ip address:
 ```bash
 ip a | grep inet
 ```
