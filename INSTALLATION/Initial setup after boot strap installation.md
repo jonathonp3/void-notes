@@ -28,39 +28,40 @@ Uncomment or add the line (use the del key in Normal mode):
 %wheel ALL=(ALL) ALL
 ```
 
-4. logout:
+4. Add password authentication sshd:
+```bash
+sudo vim /etc/ssh/sshd_config
+```
+
+add
+
+```bash
+PermitRootLogin no
+PasswordAuthentication yes 
+```
+
+5. Start and enable openssh:
+```bash
+sudo ln -s /etc/sv/sshd /var/service/
+sudo sv status sshd
+```
+
+6. logout:
 ```bash
 logout
 ```
 
-5. Login username:
+7. Login username:
 ```bash
 username
 ```
 
-6. identify ip address
-```bash
-ip a | grep inet
-```
-
-7. Create ssh key If you want to continue the setup from a different computer:
-```bash
-ssh-keygen -t rsa
-```
-
-Login to void from another computer:
-```bash
-ssh-keygen -t rsa
-ssh-copy-id username@192.168.45.121
-ssh username@192.168.45.121
-```
-
-8. Enable Ethernet if did not do it in the chroot:
+8. Enable Ethernet if you did not during installation int he chroot:
 ```bash
 sudo ln -s /etc/sv/dhcpcd /var/service/
 ```
 
-9. Setup wifi if you have not done already:s
+9. Setup wifi if you have not done already:
 
 Setup ssid and password:
 ```bash
@@ -102,7 +103,24 @@ sudo sv status wpa_supplicant
 sudo sv status dhcpcd
 ```
 
-11. Update hostname:
+11. identify ip address
+```bash
+ip a | grep inet
+```
+
+12. Create ssh key If you want to continue the setup from a different computer:
+```bash
+ssh-keygen -t rsa
+```
+
+Login to void from another computer:
+```bash
+ssh-keygen -t rsa
+ssh-copy-id username@192.168.45.121
+ssh username@192.168.45.121
+```
+
+13. Update hostname:
 ```bash
 sudo vim /etc/hostname
 ```
@@ -112,14 +130,37 @@ myhostname
 ```
 press the esc key then type :wq to save and exit
 
-12. Install vim
+13. Install vim
 Update xbps:
 ```bash
 xbps-install -u xbps
 ```
 
-13. Update system:
+14. List Available Locales:
+locale -a
+
+15. Set System Locale to Australian English:
+```bash
+sudo vim /etc/locale.conf
+```
+add
+```bash
+LANG=en_AU.UTF-8
+```
+
+16.  Generate the Locale (for glibc):
+```bash
+sudo xbps-reconfigure -f glibc-locales
+sudo locale-gen
+```
+
+17. Update system:
 ```bash
 sudo xbps-install -Syu
+```
+
+18. Restart
+```bash
+sudo reboot
 ```
 
