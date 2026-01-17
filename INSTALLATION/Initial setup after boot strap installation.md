@@ -166,7 +166,7 @@ LC_ALL="en_AU.UTF-8"
 sudo reboot
 ```
 
-19. Check Locale Settings:
+19. Check Locale Settings for errors:
 ```bash
 locale
 ```
