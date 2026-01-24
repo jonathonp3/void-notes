@@ -122,7 +122,7 @@ ssh username@192.168.45.121
 
 13. Update xbps:
 ```bash
-sudo xbps -Sy
+sudo xbps-install -Sy
 xbps-install -u xbps
 ```
 14. Install vim if you did do so during installation:
@@ -158,7 +158,13 @@ add
 
 ```bash
 LANG="en_AU.UTF-8"
-LC_ALL="en_AU.UTF-8"
+LC_COLLATE=C
+```
+
+Default US:
+```bash
+LANG=en_US.UTF-8
+LC_COLLATE=C
 ```
 
 18.  Apply locale:
