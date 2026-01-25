@@ -1,4 +1,4 @@
-# Start Syncthing to start at boot as a service 
+# Install syncthing as a service to start at boot when not logged in:
 
 Make sure rsyslog is installed (Skip these steps if you have already done so):
 
