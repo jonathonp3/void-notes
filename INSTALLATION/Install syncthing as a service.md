@@ -1,6 +1,6 @@
 # Start Syncthing to start at boot as a service 
 
-Make sure rsyslog is installed (Skip this if you have done this already):
+Make sure rsyslog is installed (Skip these steps if you have already done so):
 
 1. Install rsyslog
 ```bash
